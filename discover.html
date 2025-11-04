@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Discover UMD — Kaleb Kuklok</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <meta name="description" content="Why I chose UMD and what I like about Duluth.">
+</head>
+<body>
+  <header>
+    <div class="nav-inner">
+      <div class="brand">Kaleb Kuklok</div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="hobbies.html">Hobbies</a></li>
+          <li><a href="discover.html">Discover UMD</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="career.html">Career</a></li>
+          <li><a href="game.html">Game</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 class="text-center">Discover UMD & Duluth</h1>
+
+    <nav style="margin:10px 0; text-align:center;">
+      <a href="#why" class="btn btn-outline" style="margin-right:6px;">Why I Chose UMD</a>
+      <a href="#campus" class="btn btn-outline" style="margin-right:6px;">Campus Life</a>
+      <a href="#duluth" class="btn btn-outline">What I Like About Duluth</a>
+    </nav>
+
+    <section id="why" class="card mt-2">
+      <h2>Why I Chose University of Minnesota Duluth</h2>
+      <p style="color:var(--muted);">UMD offered the right mix of academic rigor and close community. The Labovitz School's finance coursework, the strong internship pipeline with local credit unions, and the smaller class sizes made it feel like the best fit. The campus's proximity to Lake Superior and the quality of life in Duluth were deciding factors for me.</p>
+      <p style="color:var(--muted);">I felt welcome during my campus visit — the people were friendly and the facilities (Labs, RSOP, Kirby Student Center) seemed geared toward giving students practical experience. The cost and opportunities to pursue internships locally sealed the decision.</p>
+    </section>
+
+    <section id="campus" class="mt-2">
+      <div class="card">
+        <h2>Experience UMD</h2>
+        <p style="color:var(--muted);">Here is a short campus video that gives a quick look at student life and facilities.</p>
+        <div class="video-wrap mt-1">
+          <video controls>
+            <source src="videos/umd-video.mp4" type="video/mp4">
+            Your browser does not support the video element.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="duluth" class="grid grid-2 mt-2">
+      <div class="card duluth-section">
+        <h3>What I Like About Duluth</h3>
+        <p style="color:var(--muted);">Duluth blends small-city convenience with immediate access to outdoor activities. It's a place where you can study, work, and unwind without long commutes.</p>
+
+        <h4>Seasonal Favorites</h4>
+        <p style="color:var(--muted);">Fall is my favorite — Enger Tower hikes and crisp days on the Lakewalk. Winter brings Spirit Mountain and cozy study sessions. Summer means Canal Park, festivals, and lake time.</p>
+
+        <h4>Outdoor & Food Highlights</h4>
+        <p style="color:var(--muted);">I love searching for agates on Brighton Beach, grabbing a coffee at a local shop between classes, and trying new food trucks in Canal Park during warm months.</p>
+
+        <h4>Quick Picks</h4>
+        <ul class="duluth-list" style="color:var(--muted);">
+          <li>Enger Tower — great sunset views</li>
+          <li>Canal Park & Lakewalk — walks and food</li>
+          <li>Spirit Mountain — winter sports</li>
+          <li>Portland Malt Shoppe — ice cream after finals</li>
+        </ul>
+      </div>
+
+      <div class="card duluth-section">
+        <h3>Personal Experiences & Campus Highlights</h3>
+        <h4>On-Campus</h4>
+        <p style="color:var(--muted);">I spend time in the Finance Lab and RSOP rec center. Working at a local credit union supplemented my coursework and gave me practical finance experience. The Investment Club helped me apply theory to practice through portfolio projects.</p>
+
+        <h4>Off-Campus</h4>
+        <p style="color:var(--muted);">Weekends often mean a quick hike, brunch with friends, or catching a live event downtown. Duluth's community feel makes it easy to meet people and build a network while studying.</p>
+
+        <h4>Gallery</h4>
+        <div class="grid grid-3 mt-2">
+          <img src="media/IMG_7848.jpeg" alt="Duluth 1">
+          <img src="media/IMG_7848.jpeg" alt="Duluth 2">
+          <img src="media/IMG_7848.jpeg" alt="Duluth 3">
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <small style="color:var(--muted);">© <span id="year3"></span> Kaleb Kuklok</small>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+:root {
+  --primary-color: #0b84ff; /* vivid blue */
+  --accent-color: #0a58ca;  /* deeper blue */
+  --bg: #06070a; /* near-black background */
+  --card-bg: #0f1724; /* dark card */
+  --text: #e6eef8; /* off-white */
+  --muted: #9aa9c7; /* muted blue-gray */
+  --glass: rgba(255,255,255,0.03);
+  --shadow-sm: 0 8px 30px rgba(2,6,23,0.6);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; }
+body {
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg,var(--bg), #091025 120%);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+/* Header: white with blue links */
+header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.nav-inner { max-width: 1100px; margin: 0 auto; padding: 1rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:1rem; }
+.brand { font-weight:800; letter-spacing:0.6px; color:var(--primary-color); font-size:1.05rem; }
+nav ul { list-style:none; display:flex; gap:1rem; align-items:center; }
+nav a { color: var(--muted); text-decoration:none; padding:0.5rem 0.6rem; border-radius:8px; }
+nav a:hover { color: var(--text); background: rgba(11,132,255,0.06); box-shadow: 0 6px 20px rgba(10,132,255,0.06); }
+
+.container { max-width:1100px; margin: 2.25rem auto; padding: 0 1rem; }
+.grid { display:grid; gap:1.5rem; }
+/* make hero column slightly wider for content */
+.grid-2 { grid-template-columns: 40% 60%; align-items:start; }
+.grid-3 { grid-template-columns: repeat(3,1fr); }
+
+.card { background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:1.5rem; border-radius:12px; box-shadow: var(--shadow-sm); border: 1px solid rgba(255,255,255,0.03); }
+.profile-image { width:100%; max-width:260px; border-radius:12px; display:block; margin:0 auto; object-fit:cover; }
+.img-fluid { width:100%; height:auto; border-radius:8px; display:block; object-fit:cover; }
+
+h1 { color: var(--primary-color); margin-bottom:0.5rem; }
+h2 { color: var(--primary-color); }
+p { margin-bottom:0.9rem; color: var(--muted); }
+
+.video-wrap { width:100%; border-radius:10px; overflow:hidden; box-shadow: var(--shadow-sm); border: 1px solid rgba(255,255,255,0.03); }
+video { width:100%; display:block; }
+
+.btn { display:inline-block; padding:0.55rem 1rem; border-radius:8px; text-decoration:none; font-weight:700; background: transparent; border: 1px solid transparent; }
+.btn-primary { background: linear-gradient(90deg,var(--primary-color),var(--accent-color)); color: #021026; box-shadow: 0 8px 22px rgba(11,132,255,0.12); }
+.btn-outline { border:2px solid rgba(255,255,255,0.06); color:var(--text); background: transparent; }
+
+.hobby-card img { height:200px; object-fit:cover; border-radius:8px; }
+
+/* Ensure images inside cards fill the card frame neatly */
+.card img {
+  width: 100%;
+  height: 200px; /* default frame height for gallery/hobby images */
+  object-fit: cover; /* crop to fill without distortion */
+  display: block;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Profile image keeps its max-width but also covers its box for consistent look */
+.profile-image { object-fit: cover; }
+
+.contact { background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(11,132,255,0.01)); padding:1rem; border-radius:8px; }
+
+footer { text-align:center; padding:2rem 1rem; color:var(--muted); }
+
+@media (max-width:900px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  .nav-inner { padding:0.75rem; }
+  header { position:sticky; top:0; z-index:10; }
+}
+
+/* Larger screens: allow images to scale to a portion of the viewport height */
+@media (min-width:1200px) {
+  .card img {
+    height: min(50vh, 520px); /* scale up to half the viewport on wide screens */
+  }
+  .profile-image { max-width: 320px; height: 320px; }
+}
+
+/* Duluth spotlight & discover page enhancements */
+.duluth-spotlight { background: linear-gradient(90deg, rgba(11,132,255,0.06), rgba(10,88,202,0.03)); padding:1rem; border-radius:10px; }
+.duluth-section h4 { margin-top: 0.75rem; color: var(--primary-color); }
+.duluth-list { list-style: disc; margin-left: 1.25rem; color: var(--muted); }
+.duluth-list li { margin-bottom: 0.4rem; }
+.duluth-section { background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00)); border-radius:10px; }
+
+@media (max-width:900px) {
+  .duluth-list { margin-left: 0.9rem; }
+}
+
